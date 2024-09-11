@@ -1,0 +1,122 @@
+.grid-area-container {
+    display: grid;
+    grid-template-areas: "first second third fourth fifth"
+        "six seven eight nine ten"
+        "eleven twelve thirteen fourteen fifteen";
+
+    aside {
+        background-color: greenyellow;
+        min-height: 50px;
+        min-width: 50px;
+        border: 2px solid black;
+    }
+}
+
+aside.ga-1 {
+    background-color: hotpink;
+    grid-area: first;
+    border-bottom: none
+}
+
+aside.ga-2 {
+    grid-area: second;
+}
+
+aside.ga-3 {
+    grid-area: third;
+}
+
+aside.ga-4 {
+    grid-area: fourth;
+}
+
+aside.ga-5 {
+    grid-area: fifth;
+}
+
+aside.ga-6 {
+    grid-area: six;
+    background-color: hotpink;
+    border-bottom: none;
+    border-top: none;
+}
+
+aside.ga-7 {
+    grid-area: seven;
+}
+
+aside.ga-8 {
+    grid-area: eight;
+    background-color: teal;
+}
+
+aside.ga-9 {
+    grid-area: nine;
+    background-color: teal;
+}
+
+aside.ga-10 {
+    grid-area: ten;
+    background-color: teal;
+}
+
+aside.ga-11 {
+    grid-area: eleven;
+    background-color: hotpink;
+}
+
+aside.ga-12 {
+    grid-area: twelve;
+}
+
+aside.ga-13 {
+    grid-area: thirteen;
+}
+
+aside.ga-14 {
+    grid-area: fourteen;
+}
+
+aside.ga-15 {
+    grid-area: fifteen;
+}
+
+
+/* testa grid span så som i övning 1F */
+.grid-span {
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1px;
+
+    aside {
+        background-color: hotpink;
+        min-height: 50px;
+        min-width: 50px;
+
+        &:nth-child(7) {
+            background-color: #008080;
+            grid-row: 1 / span 3;
+            grid-column: 7;
+        }
+
+        &:nth-child(10) {
+            grid-row: 2 / span 3;
+            grid-column: 2;
+            background-color: greenyellow;
+        }
+
+        &:nth-child(11) {
+            grid-column-end: span 3;
+            grid-row: 2;
+            display: grid;
+            background-color: lightblue;
+        }
+
+        &:nth-child(16) {
+            background-color: rebeccapurple;
+            grid-column: 4;
+            grid-row: 3 / span 3;
+        }
+    }
+}
